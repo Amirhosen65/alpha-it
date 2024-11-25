@@ -669,6 +669,50 @@ body {
   font-weight: 600;
   margin-bottom: 1px;
 }
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 480px) {
+  #review-section {
+    padding: 12px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .review-title h4 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .review-title h2 {
+    font-weight: 600;
+    font-size: 28px;
+  }
+  .review-card {
+    max-width: 320px;
+    padding: 14px 14px;
+  }
+  #quito{
+    width: 20px;
+  }
+  .review-card-body p{
+    font-size: 16px;
+  }
+  .star-container img{
+    width: 14px;
+  }
+  .client-name{
+    font-size: 18px;
+  }
+  .client-profile{
+    width: 20px;
+  }
+  .slider-btn {
+    padding: 3px 10px;
+    font-size: 18px;
+    opacity: 50%;
+  }
+}
 /* ============Client Review section End========= */
 
 /* ============counter section start========= */
