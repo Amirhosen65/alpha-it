@@ -46,3 +46,54 @@ const aboutContentAnimationFuntion = () => {
   observer.observe(aboutContent);
 };
 aboutContentAnimationFuntion();
+
+const sliderContainer = document.querySelector('.review-card-container');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+const cardWidth = 430 + 24;
+const totalCards = document.querySelectorAll('.review-card').length; 
+
+function hideButtons() {
+  prevBtn.classList.add('hidden');
+  nextBtn.classList.add('hidden');
+}
+
+
+function updatePrevButton() {
+  if (currentIndex === 0) {
+    prevBtn.classList.add('hidden');
+  } else {
+    prevBtn.classList.remove('hidden');
+  }
+}
+
+function updateNextButton() {
+  if (currentIndex === totalCards - 1) {
+    nextBtn.classList.add('hidden');
+  } else {
+    nextBtn.classList.remove('hidden');
+  }
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = Math.max(currentIndex - 1, 0);
+  sliderContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+  updatePrevButton();
+  updateNextButton();
+});
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < totalCards - 1) {
+    currentIndex++;
+    sliderContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+  
+  updatePrevButton();
+  updateNextButton();
+});
+
+
+

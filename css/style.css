@@ -512,7 +512,164 @@ body {
   margin-bottom: 20px;
   gap: 80px;
 }
+@media (max-width: 768px) {
+  .card-cotainer {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px;
+  }
+  .blog-header h4{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-cotainer {
+    grid-template-columns: 1fr; 
+    grid-gap: 15px;
+  }
+  .blog-header h4{
+    font-size: 16px;
+  }
+  .blog-header h2{
+    font-size: 28px;
+    font-weight: 500;
+  }
+  #blog-section{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #blog-user-name{
+    font-size: 16px;
+  }
+  #blog-user-name i{
+    padding-right: 5px;
+  }
+  #card-category{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .card-body-top{
+    gap: 40px;
+  }
+}
+
 /* ============Blog Section End========= */
+
+/* ============Client Review section Start========= */
+#review-section {
+  background-color: var(--border-colo);
+  padding: 40px;
+}
+
+.review-title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.review-title h4 {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.review-title h2 {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: var(--title-color);
+  font-size: 42px;
+}
+
+#title-style {
+  color: #4e2fda;
+}
+
+/* Slider styles */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.review-card-container {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.5s ease;
+  width: max-content;
+}
+
+.review-card {
+  max-width: 380px;
+  background-color: var(--white-color);
+  padding: 44px 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-card-footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#client-profile {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 10;
+  border-radius: 50%;
+  color: var(--white-color);
+  transition: transform 0.3s ease;
+}
+.slider-btn:hover{
+  background: transparent;
+  color: var(--primary-color);
+}
+.prev-btn {
+  left: 20px;
+
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.star-container {
+  display: flex;
+  gap: 5px;
+}
+
+.star-container img {
+  width: 20px;
+}
+.review-card-body p{
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-top: 30px;
+}
+.client-name{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+/* ============Client Review section End========= */
 
 /* ============counter section start========= */
 #counter {
