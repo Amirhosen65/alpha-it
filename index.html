@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Link Swiper js -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
     <!-- ==========font-awesome cdn=========== -->
     <link
       rel="stylesheet"
@@ -499,7 +504,6 @@
               <div class="blog-card-header">
                 <p class=" blog-card-date">May 22, 2024</p>
                 <div class="card-effect-shadow">
-
                 </div>
                 <img src="./image/blog1.png" alt="rover" />
               </div>
@@ -512,7 +516,7 @@
                   The Role of Innovation in Modern Business.
                 </h3>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum reprehenderit asperiores assumenda repellendus sit dolorum rerum aut, sapiente iure!
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum reprehenderit asperiores assumenda repellendus.
                 </p>
               </div>
             </div>
@@ -566,27 +570,27 @@
 
     <!-- ==========Client Review section Start======== -->
      <section id="review-section">
-     <div class="container">
+     <div class="">
       <div class="review-title">
         <h4>Testimonials</h4>
         <h2>
           “What Our <span id="title-style">Client Say”</span>
         </h2>
       </div>
-      <div class="slider-container">
-        <button class="slider-btn prev-btn">&lt;</button>
-        <div class=" review-card-container">
-          
-          <div class=" review-card">
-            <div>
-              <img id="quito" src="./image/quito.svg" alt="">
-            </div>
-            <div class="review-card-body">
-              <p>Wworking with SEOC has been a game-changer for our business. Their strategic approach to SEO  digital marketing has significantly increased our online visibility and lead generation.”</p>
-            </div>
-            <div class="review-card-footer">
-              <div>
-                <p class=" client-name">
+
+      <div class="card-container swiper">
+        <div class="card-wrapper">
+          <ul class="card-list swiper-wrapper">
+
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (1).jpg" alt="">
+                </div>
+                <img id="quito" src="./image/quito.svg" alt="">
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
                   David Len.
                 </p>
                 <div class="star-container">
@@ -596,21 +600,64 @@
                   <img src="./image/star.svg" alt="">
                 </div>
               </div>
-              <div>
-                <img id="client-profile" src="./image/profilr1.jpg" alt="">
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
               </div>
-            </div>
-          </div>
-          <div class=" review-card">
-            <div>
-              <img src="./image/quito.svg" alt="">
-            </div>
-            <div class="review-card-body">
-              <p>Wrking with SEOC has been a game-changer for our business. Their strategic approach to SEO  digital marketing has significantly increased our online visibility and lead generation.”</p>
-            </div>
-            <div class="review-card-footer">
-              <div>
-                <p class=" client-name">
+            </li>
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (2).jpg" alt="">
+                </div>
+                <img id="quito" src="./image/quito.svg" alt="">
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
+                  Jhon Doe
+                </p>
+                <div class="star-container">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                </div>
+              </div>
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
+              </div>
+            </li>
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (3).jpg" alt="">
+                </div>
+                <img id="quito" src="./image/quito.svg" alt="">
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
+                  Ms. Timmy Hervey
+                </p>
+                <div class="star-container">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                </div>
+              </div>
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
+              </div>
+            </li>
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (1).jpg" alt="">
+                </div>
+                <img id="quito" src="./image/quito.svg" alt="">
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
                   David Len.
                 </p>
                 <div class="star-container">
@@ -620,21 +667,19 @@
                   <img src="./image/star.svg" alt="">
                 </div>
               </div>
-              <div>
-                <img id="client-profile" src="./image/profilr1.jpg" alt="">
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
               </div>
-            </div>
-          </div>
-          <div class=" review-card">
-            <div>
-              <img src="./image/quito.svg" alt="">
-            </div>
-            <div class="review-card-body">
-              <p>Wking with SEOC has been a game-changer for our business. Their strategic approach to SEO  digital marketing has significantly increased our online visibility and lead generation.”</p>
-            </div>
-            <div class="review-card-footer">
-              <div>
-                <p class=" client-name">
+            </li>
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (2).jpg" alt="">
+                </div>
+                <img id="quito" src="./image/quito.svg" alt="">
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
                   David Len.
                 </p>
                 <div class="star-container">
@@ -644,39 +689,21 @@
                   <img src="./image/star.svg" alt="">
                 </div>
               </div>
-              <div>
-                <img id="client-profile" src="./image/profilr1.jpg" alt="">
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
               </div>
-            </div>
-          </div>
-          <div class=" review-card">
-            <div>
-              <img src="./image/quito.svg" alt="">
-            </div>
-            <div class="review-card-body">
-              <p>working with SEOC has been a game-changer for our business. Their strategic approach to SEO  digital marketing has significantly increased our online visibility and lead generation.”</p>
-            </div>
-            <div class="review-card-footer">
-              <div>
-                <p class=" client-name">
-                  David Len.
-                </p>
-                <div class="star-container">
-                  <img src="./image/star.svg" alt="">
-                  <img src="./image/star.svg" alt="">
-                  <img src="./image/star.svg" alt="">
-                  <img src="./image/star.svg" alt="">
-                </div>
-              </div>
-              <div>
-                <img id="client-profile" src="./image/profilr1.jpg" alt="">
-              </div>
-            </div>
-          </div>
+            </li>
+
+
+            
+          </ul>
           
         </div>
-        <button class="slider-btn next-btn">&gt;</button>
+        <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
       </div>
+      
      </div>
      </section>
     <!-- ==========Client Review section End======== -->
@@ -787,6 +814,8 @@
         </div>
        </section>
       <!-- =========contact section end======== -->
+         <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- =======javacript link====== -->
     <script src="./js/script.js"></script>
     <!-- =======bootsrap cdn====== -->

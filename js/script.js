@@ -47,53 +47,32 @@ const aboutContentAnimationFuntion = () => {
 };
 aboutContentAnimationFuntion();
 
-const sliderContainer = document.querySelector('.review-card-container');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+// swiper js func
 
-let currentIndex = 0;
-const cardWidth = 430 + 24;
-const totalCards = document.querySelectorAll('.review-card').length; 
+new Swiper(".card-wrapper", {
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
 
-function hideButtons() {
-  prevBtn.classList.add('hidden');
-  nextBtn.classList.add('hidden');
-}
-
-
-function updatePrevButton() {
-  if (currentIndex === 0) {
-    prevBtn.classList.add('hidden');
-  } else {
-    prevBtn.classList.remove('hidden');
-  }
-}
-
-function updateNextButton() {
-  if (currentIndex === totalCards - 1) {
-    nextBtn.classList.add('hidden');
-  } else {
-    nextBtn.classList.remove('hidden');
-  }
-}
-
-prevBtn.addEventListener('click', () => {
-  currentIndex = Math.max(currentIndex - 1, 0);
-  sliderContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-
-  updatePrevButton();
-  updateNextButton();
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1524: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 });
-
-nextBtn.addEventListener('click', () => {
-  if (currentIndex < totalCards - 1) {
-    currentIndex++;
-    sliderContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
-  
-  updatePrevButton();
-  updateNextButton();
-});
-
-
-
