@@ -477,9 +477,9 @@ body {
   color: var(--white-color);
   background-color: var(--primary-color);
   padding: 5px 10px 5px 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   left: 40px;
+  bottom: -35px;
 
 }
 .blog-card-body {
@@ -508,8 +508,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row-reverse;
   gap: 80px;
+  margin-top: 24px;
+}
+#date{
+  color: var(--black-color);
+  margin-left: 5px;
+  font-weight: 400;
+}
+.fa-user{
+  color: var(--primary-color);
 }
 @media (max-width: 768px) {
   .card-cotainer {
@@ -600,7 +608,7 @@ body {
 }
 
 #title-style {
-  color: #4e2fda;
+  color: var(--primary-color);
 }
 .card-container{
   max-width: 1300px;
