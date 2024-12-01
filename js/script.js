@@ -1,48 +1,111 @@
+// About Image Animation
 const aboutImgAnimation = () => {
   const aboutImg = document.querySelector("#aboutSection");
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Add the animation class when the section comes into view
-          entry.target.classList.add("animate__fadeInLeft");
-          // Optionally, you can remove the observer once the animation has been triggered
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.5, // Trigger animation when at least 50% of the section is in view
-    }
-  );
+  if (aboutImg) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate__fadeInLeft");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-  // Start observing the target section
-  observer.observe(aboutImg);
+    observer.observe(aboutImg);
+  }
 };
-aboutImgAnimation();
 
-const aboutContentAnimationFuntion = () => {
+// About Content Animation
+const aboutContentAnimationFunction = () => {
   const aboutContent = document.querySelector("#aboutContent");
 
-  // Create an IntersectionObserver
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Add the animation class when the section is in view
-          entry.target.classList.add("animate__fadeInRight");
-          entry.target.style.opacity = 1; // Optional: you can make it fade in smoothly
-          observer.unobserve(entry.target); // Optionally stop observing after the animation
-        }
-      });
-    },
-    {
-      threshold: 0.5, // Trigger when at least 50% of the section is visible
-    }
-  );
+  if (aboutContent) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate__fadeInRight");
+            entry.target.style.opacity = 1;
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-  // Start observing the aboutContent section
-  observer.observe(aboutContent);
+    observer.observe(aboutContent);
+  }
 };
-aboutContentAnimationFuntion();
+
+aboutImgAnimation();
+aboutContentAnimationFunction();
+
+// Select the dots container
+const dotsContainer = document.querySelector(".dots");
+
+for (let i = 0; i < 8; i++) { 
+  const dot = document.createElement("dots");
+  dot.classList.add("dot");
+
+  dot.style.top = `${Math.random() * 100}vh`;
+  dot.style.left = `${Math.random() * 100}vw`;
+
+  dotsContainer.appendChild(dot);
+
+  moveDot(dot);
+}
+
+function moveDot(dot) {
+  const randomInterval = Math.random() * 5000 + 3000; 
+
+  setInterval(() => {
+    dot.style.top = `${Math.random() * 100}vh`;
+    dot.style.left = `${Math.random() * 100}vw`;
+  }, randomInterval);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".slider");
+  const slides = slider.children;
+  const slideCount = slides.length;
+  let currentIndex = 0;
+
+  // Clone the first and last slides for a smooth transition
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slideCount - 1].cloneNode(true);
+
+  slider.appendChild(firstClone);
+  slider.insertBefore(lastClone, slides[0]);
+
+  let slideWidth = slides[0].clientWidth;
+
+  // Set initial position
+  slider.style.transform = `translateX(-${slideWidth}px)`;
+
+  // Update slide width on window resize
+  window.addEventListener("resize", () => {
+    slideWidth = slides[0].clientWidth;
+    slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
+  });
+
+  // Auto-play function
+  function autoPlay() {
+    currentIndex++;
+    slider.style.transition = "transform 0.5s ease-in-out";
+    slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
+
+    slider.addEventListener("transitionend", () => {
+      if (currentIndex === slideCount) {
+        slider.style.transition = "none";
+        currentIndex = 0;
+        slider.style.transform = `translateX(-${slideWidth}px)`;
+      }
+    });
+  }
+
+  setInterval(autoPlay, 2000);
+});
