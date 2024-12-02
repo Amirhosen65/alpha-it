@@ -21,6 +21,7 @@ a {
   --black-color: #000;
   --primary-bg: #f5f7fc;
   --border-colo: #dde5f6;
+  --primary-hover: #a191ee;
 }
 body {
   overflow-x: hidden;
@@ -328,10 +329,71 @@ body {
 :hover span {
   z-index: 1000;
   transition: 0.3s;
-  color: #fff;
+  color: var(--white-color);
 }
 
 /* ============service section end========= */
+
+/* ============portfolio section start========= */
+    /* Style the tab */
+.tab {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 15px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  
+}
+
+.tab button:hover {
+  background-color: var(--primary-hover);
+  color: var(--white-color);
+}
+
+.tab button.active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+.portfolio-section{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.portfolio-header h4 {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 24px;
+}
+.portfolio-header h2 {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: var(--title-color);
+  font-size: 42px;
+}
+.portfolio-header{
+  margin-bottom: 60px;
+}
+/* ============portfolio section end========= */
+
 /* ============Pricing section start========= */
 #pricing {
   padding-top: 60px;
