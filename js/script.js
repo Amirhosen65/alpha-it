@@ -67,47 +67,48 @@ function moveDot(dot) {
     dot.style.left = `${Math.random() * 100}vw`;
   }, randomInterval);
 }
+const backToTopButton = document.getElementById("back-to-top");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".slider");
-  const slides = slider.children;
-  const slideCount = slides.length;
-  let currentIndex = 0;
-
-  // Clone the first and last slides for a smooth transition
-  const firstClone = slides[0].cloneNode(true);
-  const lastClone = slides[slideCount - 1].cloneNode(true);
-
-  slider.appendChild(firstClone);
-  slider.insertBefore(lastClone, slides[0]);
-
-  let slideWidth = slides[0].clientWidth;
-
-  // Set initial position
-  slider.style.transform = `translateX(-${slideWidth}px)`;
-
-  // Update slide width on window resize
-  window.addEventListener("resize", () => {
-    slideWidth = slides[0].clientWidth;
-    slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
-  });
-
-  // Auto-play function
-  function autoPlay() {
-    currentIndex++;
-    slider.style.transition = "transform 0.5s ease-in-out";
-    slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
-
-    slider.addEventListener("transitionend", () => {
-      if (currentIndex === slideCount) {
-        slider.style.transition = "none";
-        currentIndex = 0;
-        slider.style.transform = `translateX(-${slideWidth}px)`;
-      }
-    });
+window.onscroll = function () {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
   }
+};
 
-  setInterval(autoPlay, 2000);
+backToTopButton.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
+$(document).ready(function () {
+  $('.slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow:
+      '<button type="button" class="slick-prev">❮</button>',
+    nextArrow:
+      '<button type="button" class="slick-next">❯</button>',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
 });
 
 // swiper js func

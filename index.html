@@ -36,6 +36,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
   </head>
   <body>
     <!-- ============navbar section start========== -->
@@ -147,7 +149,7 @@
                 <p>
                   At Alpha IT, we are committed to providing clear, accurate, and
                   personalized tax solutions for individuals and businesses.
-                  With years of experience and a client-focused approach, we
+                  With years of experience and a client approach, we
                 </p>
               </div>
               <div class="about-tag-box">
@@ -426,7 +428,7 @@
             <div class="service-header-wrapper">
               <div class="service-header text-center">
                 <h4>Pricing</h4>
-                <h2>We’ve offered the best pricing for you</h2>
+                <h2>We offer the best pricing for you</h2>
               </div>
             </div>
           </div>
@@ -800,23 +802,32 @@
 
 
      <div class="clients">
-      <div class="service-header text-center">
+      <div class="service-header">
         <h4>Our Clients</h4>
         <h2>Trusted by Leading Brands</h2>
       </div>
-      <section id="slider-section" style="display: flex; align-items: center; justify-content: center;">
-        <div class="slider-container">
-          <div class="slider">
-            <img src="./image/Arowa.jpg" alt="Image 1">
-            <img src="./image/zelus_-01.png" alt="Image 2">
-            <img src="./image/webtech.png" alt="Image 3">
-            <img src="./image/png-transparent-rain-bird-hd-logo-thumbnail.png" alt="Image 4">
-            <img src="./image/logo.png" alt="Image 5"> 
-          </div>
+      <div class="slider">
+        <div class="slide">
+          <img src="./image/webtech.png" alt="Webtech Logo" />
         </div>
-      </section>
-            
-    </div>      
+        <div class="slide">
+          <img src="./image/Arowa.jpg" alt="Arowa Logo" />
+        </div>
+        <div class="slide">
+          <img src="./image/zelus_-01.png" alt="Zelus Logo" />
+        </div>
+        <div class="slide">
+          <img src="./image/logo.png" alt="Logo 4" />
+        </div>
+        <div class="slide">
+          <img
+            src="./image/png-transparent-rain-bird-hd-logo-thumbnail.png"
+            alt="Logo 5"
+          />
+        </div>
+      </div>
+    </div>
+        
 
 
       <!-- =========contact section start======== -->
@@ -942,7 +953,10 @@
             </div>            
             </form>
           </div>
-    
+          <button id="back-to-top" title="Go to top">
+            <i class="fas fa-chevron-up"></i>
+          </button>
+          
           
         </div>
       </footer>
@@ -954,6 +968,8 @@
          <!-- swiper js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- =======javacript link====== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="./js/script.js"></script>
     <!-- =======bootsrap cdn====== -->
     <script
