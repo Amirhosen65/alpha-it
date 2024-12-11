@@ -109,3 +109,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(autoPlay, 2000);
 });
+
+// swiper js func
+
+new Swiper(".card-wrapper", {
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1524: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
+
+document.getElementById('all').style.display = "block";
+evt.currentTarget.className += " active";
+// tabs script
+function openCity(evt, categoryName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(categoryName).style.display = "block";
+  evt.currentTarget.className += " active";
+}

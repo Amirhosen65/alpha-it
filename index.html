@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Link Swiper js -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
     <!-- ==========font-awesome cdn=========== -->
     <link
       rel="stylesheet"
@@ -376,6 +381,43 @@
       </div>
     </section>
     <!-- =========service section end========= -->
+
+    <!-- =========Portfolio section start========= -->
+      <section class="portfolio-section container">
+        <div class="portfolio-header text-center">
+          <h4>Portfolio</h4>
+          <h2>Here some Portfolio of our</h2>
+        </div>
+        <div>
+            <div class="tab">
+              <button class="tablinks active" onclick="openCity(event, 'all')">ALL</button>
+              <button class="tablinks" onclick="openCity(event, 'web-development')">WEB DEVELOPMENT</button>
+              <button class="tablinks" onclick="openCity(event, 'wordpress')">WORDPRESS</button>
+              <button class="tablinks" onclick="openCity(event, 'apps')">APPS</button>
+            </div>
+
+            <div id="all" class="tabcontent active">
+              <h3>All</h3>
+              <p>all content</p>
+            </div>
+
+            <div id="web-development" class="tabcontent">
+              <h3>Web development</h3>
+              <p>content</p>
+            </div>
+
+            <div id="wordpress" class="tabcontent">
+              <h3>Wordpress</h3>
+              <p>Wordpress</p>
+            </div>
+            <div id="apps" class="tabcontent">
+              <h3>Apps</h3>
+              <p>Apps</p>
+            </div>
+        </div>
+      </section>
+    <!-- =========Portfolio section end========= -->
+
     <!-- ==========pricing section start======== -->
     <section id="pricing">
       <div class="container">
@@ -475,6 +517,226 @@
       </div>
     </section>
     <!-- ==========pricing section end======== -->
+
+    <!-- ==========Blogs section start======== -->
+     <section id="blog-section">
+      <div class="container">
+        <div class="blog-header-wrapper">
+          <div class="blog-header">
+            <h4>Latests News</h4>
+            <h2>Read Our Latest Update</h2>
+          </div>
+        </div>
+        <div>
+          <div class=" card-cotainer">
+            <div class="blog-card">
+              <div class="blog-card-header">
+                <p class=" blog-card-date">Business Strategy</p>
+                <div class="card-effect-shadow">
+                </div>
+                <img src="./image/blog1.png" alt="rover" />
+              </div>
+              <div class="blog-card-body">
+                <div class=" card-body-top">
+                  <p id="card-category"><i class="fa-regular fa-calendar"></i><span id="date">May 22, 2024</span></p>
+                  <p id="blog-user-name"><i class="fa-solid fa-user"></i>Ben Stock</p>
+                </div>
+                <h3>
+                  The Role of Innovation in Modern Business.
+                </h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum reprehenderit.
+                </p>
+              </div>
+            </div>
+            <div class="blog-card">
+              <div class="blog-card-header">
+                <p class=" blog-card-date">Market Research</p>
+                <div class="card-effect-shadow">
+
+                </div>
+                <img src="./image/blog-img2.png" alt="rover" />
+              </div>
+              <div class="blog-card-body">
+                <div class=" card-body-top">
+                  <p id="card-category"><i class="fa-regular fa-calendar"></i><span id="date">May 22, 2024</span></p>
+                  <p id="blog-user-name"><i class="fa-solid fa-user"></i>Ben Stock</p>
+                </div>
+                <h3>
+                  Mastering the Art of Financial Planning for...
+                </h3>
+                <p>
+                  Explore proven strategies and actionable insights to drive growth and thrive in the...
+                </p>
+              </div>
+            </div>
+            <div class="blog-card">
+              <div class="blog-card-header">
+                <p class=" blog-card-date">Business Strategy</p>
+                <div class="card-effect-shadow">
+
+                </div>
+                <img src="./image/blog-img3.png" alt="rover" />
+              </div>
+              <div class="blog-card-body">
+                <div class=" card-body-top">
+                  <p id="card-category"><i class="fa-regular fa-calendar"></i><span id="date">May 22, 2024</span></p>
+                  <p id="blog-user-name"><i class="fa-solid fa-user"></i>Ben Stock</p>
+                </div>
+                <h4>
+                  How to Create a Winning Marketing Plan
+                </h4>
+                <p>
+                  Discover how data analytics can transform decision-making processes, drive innovation..
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- ==========Blogs section end======== -->
+
+    <!-- ==========Client Review section Start======== -->
+     <section id="review-section">
+     <div class="">
+      <div class="review-title">
+        <h4>Testimonials</h4>
+        <h2>
+          “What Our <span id="title-style">Client Say”</span>
+        </h2>
+      </div>
+
+      <div class="card-container swiper">
+        <div class="card-wrapper">
+          <ul class="card-list swiper-wrapper">
+
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (1).jpg" alt="">
+                </div>
+                
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
+                  David Len.
+                </p>
+                <div class="star-container">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                </div>
+              </div>
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
+              </div>
+            </li>
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (2).jpg" alt="">
+                </div>
+                
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
+                  Jhon Doe
+                </p>
+                <div class="star-container">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                </div>
+              </div>
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
+              </div>
+            </li>
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (3).jpg" alt="">
+                </div>
+                
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
+                  Ms. Timmy Hervey
+                </p>
+                <div class="star-container">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                </div>
+              </div>
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
+              </div>
+            </li>
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (1).jpg" alt="">
+                </div>
+                
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
+                  David Len.
+                </p>
+                <div class="star-container">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                </div>
+              </div>
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
+              </div>
+            </li>
+            <li class="card-item swiper-slide">
+              <div class="client-profile-image">
+                <div>
+                  <img id="client-profile" src="./image/review (2).jpg" alt="">
+                </div>
+                
+              </div>
+              <div class=" client-details">
+                <p class="client-name">
+                  David Len.
+                </p>
+                <div class="star-container">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                  <img src="./image/star.svg" alt="">
+                </div>
+              </div>
+              <div class="review-card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quo ratione iste dolorum ullam adipisci sapiente consequuntur, nemo saepe doloremque placeat officia nesciunt in asperiores?”</p>
+              </div>
+            </li>
+
+
+            
+          </ul>
+          
+        </div>
+        <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      </div>
+      
+     </div>
+     </section>
+    <!-- ==========Client Review section End======== -->
+
      <!-- =======counter section start=========== -->
       <section id="counter">
         <div class="container">
@@ -536,6 +798,7 @@
       </section>
      <!-- =======counter section end=========== -->
 
+<<<<<<< HEAD
      <div class="clients">
       <div class="service-header text-center">
         <h4>Our Clients</h4>
@@ -555,6 +818,8 @@
             
     </div>      
 
+=======
+>>>>>>> toufikul
       <!-- =========contact section start======== -->
       <section id="contact">
         <div class="container">
@@ -687,6 +952,8 @@
         <p style="align-items: center; justify-content: center;">© 2024 Amir IT Ltd. All right reserved. Prepared AJ Amir.</p>
       </div>
       <!-- =========contact section end======== -->
+         <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- =======javacript link====== -->
     <script src="./js/script.js"></script>
     <!-- =======bootsrap cdn====== -->
